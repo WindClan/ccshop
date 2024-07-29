@@ -39,7 +39,7 @@ local krist = require("krist")
 local stock = require("stock")
 local shopsync = require("shopsync")
 
-print("yfshop v1")
+print("fwshop v1")
 
 stock.setSettings(settings.stock)
 topbar.loadSettings(settings.topbar)
@@ -101,7 +101,7 @@ local modem = peripheral.wrap("left")
 
 if not modem then
   print("Modem was not found. Shopsync will not be enabled.")
-  print("Add an **ENDER MODEM** **IN THE 1ST SLOT** and restart yfshop to enable shopsync support.")
+  print("Add an **ENDER MODEM** **IN THE 1ST SLOT** and restart fwshop to enable shopsync support.")
 else
   modem.open(9773)
 end

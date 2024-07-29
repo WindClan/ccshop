@@ -44,7 +44,7 @@ function shopsync.update(stock)
         owner = settings["topbar"]["managedBy"],
         computerID = os.getComputerID(),
         software = {
-          name = "yfshop",
+          name = "fwshop",
           version = "1"
         },
         location = {

@@ -24,7 +24,7 @@ function stock.drawRow(monitor, y, rightGap, width, row)
   end
 
   local currentW = 1;
-  
+
   monitor.setCursorPos(x, y)
   currentW = math.floor(0.41*width)
   monitor.write(row[1]:sub(0, currentW))
@@ -42,7 +42,7 @@ function stock.drawRow(monitor, y, rightGap, width, row)
 
   monitor.setCursorPos(x, y)
   currentW = math.floor(0.15*width)
-  monitor.write(row[4]) 
+  monitor.write(row[4])
 end
 
 function stock.render(monitor, rawY, topbar)
@@ -110,7 +110,7 @@ function stock.buy(metaname, kst) -- returns true if a return is required, or a 
   stock.calculate()               -- good to rerun here incase chest has updated
   -- it is good to be 100% sure about info here
   local wiredModem = nil
-  
+
   for _, v in pairs(peripheral.getNames()) do
     if peripheral.hasType(v, "modem") then
       local modem = peripheral.wrap(v)
@@ -119,15 +119,15 @@ function stock.buy(metaname, kst) -- returns true if a return is required, or a 
       end
     end
   end
-  
+
   if not wiredModem then
-    print("yfshop/stock.lua could not find a wired modem connected to this turtle.")
+    print("fwshop/stock.lua could not find a wired modem connected to this turtle.")
     print("Do not put your wired modem on the left side of the turtle.") -- left side of the turtle is technically the shopsync ender modem
     return true
   end
 
   local turtlename = wiredModem.getNameLocal()
-  
+
   local invItem = nil
 
   for categoryid, category in pairs(stock.categories) do
@@ -175,7 +175,7 @@ function stock.buy(metaname, kst) -- returns true if a return is required, or a 
 
   stock.calculate()
 
-  local priceForPushed = invItem.price * mPushed
+  local priceForPushed = invItem.price * totalPushed
   local underFlow = math.floor(kst - priceForPushed)
   if underFlow > 0 then
     return underFlow

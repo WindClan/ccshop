@@ -1,2 +1,2 @@
-shell.setDir("/yfshop")
-shell.run("yfshop.lua")
+shell.setDir("/fwshop")
+shell.run("fwshop.lua")

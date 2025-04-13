@@ -39,7 +39,7 @@ local krist = require("krist")
 local stock = require("stock")
 local shopsync = require("shopsync")
 
-print("fwshop v1")
+print("ccshop v2")
 
 stock.setSettings(settings.stock)
 topbar.loadSettings(settings.topbar)

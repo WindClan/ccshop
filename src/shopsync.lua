@@ -20,7 +20,7 @@ function shopsync.update(stock)
         prices = {
           {
             value = tonumber(item["price"]),
-            currency = "KST",
+            currency = settings["currency"],
             address = settings["address"],
             requiredMeta = itemid
           }
@@ -44,8 +44,8 @@ function shopsync.update(stock)
         owner = settings["topbar"]["managedBy"],
         computerID = os.getComputerID(),
         software = {
-          name = "fwshop",
-          version = "1"
+          name = "ccshop",
+          version = "2"
         },
         location = {
           coordinates = {x, y, z},

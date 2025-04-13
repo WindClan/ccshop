@@ -4,6 +4,7 @@
 ]]
 
 return {
+  ["currency"] = "KST", --The name of the currency, currently only supports KST. Changing this name changes a few internal things like the server
   ["address"] = "khelloworl", -- Imput your address here. You can also use a name
   ["privateKey"] = "MyPrivateKey", -- Input your private key here
   ["mnameWhitelist"] = {"donate"}, -- add metanames for your address you wish not to be refunded

@@ -1,7 +1,7 @@
 while true do
     a = peripheral.find("monitor")
     a.setTextScale(1)
-    shell.run("fwshop/fwshop.lua")
+    shell.run("ccshop/fwshop.lua")
     a.setBackgroundColor(colors.blue)
     a.setTextColor(colors.white)
     a.clear()
